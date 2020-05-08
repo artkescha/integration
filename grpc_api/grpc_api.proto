@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service Accumulator {
+	rpc Accumulate(Request) returns (Response) {}
+	rpc Reset(Request) returns (Response) {}
+}
+
+message Request {
+	uint64 addendum = 1;
+}
+
+message Response {
+	uint64 result = 1;
+}
